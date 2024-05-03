@@ -1,13 +1,13 @@
-#include "array.h"
-
 #include <iostream>
-#include <string>
+#include <string.h>
+
+#include "array.h"
 #define max 10
 using namespace std;
 
 int main() {
     alumno x[max], y[max];
-    int op, dec, n = -1;
+    int op, dec, n = -1, m = -1;
     do {
         system("cls");
         cout << "\n\nMENU DE OPCIONES";
@@ -30,12 +30,23 @@ int main() {
                     cin >> dec;
                     switch (dec) {
                         case 1:
+                            system("cls");
+                            inserta_d(x, n, max);
                             break;
                         case 2:
+                            system("cls");
+                            elimina_d(x, n);
+                            cout << "El dato se elimino correctamente!!"
+                                 << endl;
+                            system("pause");
                             break;
                         case 3:
+                            system("cls");
+                            modificar_d(x, n);
                             break;
                         case 4:
+                            mostrar(x, n);
+                            system("cls");
                             break;
                         case 5:
                             break;
@@ -59,12 +70,20 @@ int main() {
                     cin >> dec;
                     switch (dec) {
                         case 1:
+                            system("cls");
+                            inserta_o(y, m, max);
                             break;
                         case 2:
+                            elimina_o(y, m);
+                            system("cls");
                             break;
                         case 3:
+                            modificar_o(y, m);
+                            system("cls");
                             break;
                         case 4:
+                            mostrar(y, m);
+                            system("cls");
                             break;
                         case 5:
                             break;
@@ -81,6 +100,6 @@ int main() {
                 cout << "\nOpcion no valida. Eliga entre [1-3].\n";
                 system("pause");
         }
-    } while (op > 0 || op < 3);
+    } while (op > 0 && op < 3);
     return 0;
 }
