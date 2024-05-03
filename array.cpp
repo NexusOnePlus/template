@@ -36,9 +36,6 @@ int main() {
                         case 2:
                             system("cls");
                             elimina_d(x, n);
-                            cout << "El dato se elimino correctamente!!"
-                                 << endl;
-                            system("pause");
                             break;
                         case 3:
                             system("cls");
