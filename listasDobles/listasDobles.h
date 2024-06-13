@@ -118,7 +118,7 @@ void insertad_ad(nodo *&p, char *ref) {
     if (p != NULL) {
         nodo *q = p;
         bool cen = false;
-        while (strcmp(p->nomb, ref) != 0 && cen == false) {
+        while (strcmp(q->nomb, ref) != 0 && cen == false) {
             if (q->sig != NULL) {
                 q = q->sig;
             } else {

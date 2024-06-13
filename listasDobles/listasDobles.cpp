@@ -18,7 +18,7 @@ int main() {
         cout << "3. Insertar al inicio" << endl;
         cout << "4. Insertar al final" << endl;
         cout << "5. Insertar antes de una referencia" << endl;
-        cout << "6. Insertar despues de una referncia" << endl;
+        cout << "6. Insertar despues de una referencia" << endl;
         cout << "7. Elimina el primer nodo" << endl;
         cout << "8. Elimina el ultimo nodo" << endl;
         cout << "9. Elimina un nodo especifico" << endl;
