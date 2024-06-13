@@ -119,7 +119,7 @@ void insertad_ad(nodo *&p, char *ref) {
         nodo *q = p;
         bool cen = false;
         while (strcmp(p->nomb, ref) != 0 && cen == false) {
-            if (q->sig == NULL) {
+            if (q->sig != NULL) {
                 q = q->sig;
             } else {
                 cen = true;
@@ -134,7 +134,7 @@ void insertad_ad(nodo *&p, char *ref) {
             x->ant = r;
             q->ant = x;
             if (p == q) {
-                p == x;
+                p = x;
             } else {
                 r->sig = x;
             }
@@ -204,7 +204,7 @@ void eliminard_u(nodo *&p, nodo *&f) {
         nodo *q = f;
         f = f->ant;
         if (q == p) {
-            p == NULL;
+            p = NULL;
         } else {
             f->sig = NULL;
         }
@@ -229,8 +229,8 @@ void eliminard_x(nodo *&p, nodo *&f, char *x) {
         }
         if (cen == false) {
             if (p == f) {
-                p == NULL;
-                f == NULL;
+                p = NULL;
+                f = NULL;
             } else {
                 if(p == q){
                     p = p->sig;
@@ -282,7 +282,7 @@ void eliminard_ad(nodo *&p, char *ref) {
                     s->sig = q;
                     q->ant = s;
                 }
-                cout << "\nNODO ANTES DE UNA REFERENCIA ELIMINADO" << endl;
+                cout << "\n[NODO ANTES DE UNA REFERENCIA ELIMINADO]" << endl;
                 delete (r);
                 recorre(p);
             }
@@ -319,7 +319,7 @@ void eliminard_dd(nodo *&f, char *ref) {
                     s->ant = q;
                 }
                 delete (r);
-                cout << "\nNODO DESPUES DE UNA REFERENCIA ELIMINADO" << endl;
+                cout << "\n[NODO DESPUES DE UNA REFERENCIA ELIMINADO]" << endl;
             }
         } else {
             cout << "\nLA REFERENCIA NO SE ENCUENTRA EN LA LISTA" << endl; 
